@@ -63,6 +63,7 @@
 #include <entity.h>
 
 #include "tier0/memdbgon.h"
+#include "customvote.h"
 
 class GameSessionConfiguration_t
 {};
@@ -360,6 +361,8 @@ bool CS2Fixes::Load(PluginId id, ISmmAPI* ismm, char* error, size_t maxlen, bool
 	g_pMapMigrations = new CMapMigrations();
 
 	RegisterWeaponCommands();
+
+	RegisterCustomVoteCommands();
 
 	// Check hide distance
 	CTimer::Create(0.5f, TIMERFLAG_NONE, []() {

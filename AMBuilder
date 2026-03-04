@@ -77,6 +77,7 @@ for sdk_target in MMSPlugin.sdk_targets:
     'sdk/entity2/entityidentity.cpp',
     'sdk/entity2/entitykeyvalues.cpp',
     'sdk/tier1/keyvalues3.cpp',
+    'src/customvote.cpp',
   ]
 
   protoc_builder = builder.tools.Protoc(protoc = sdk_target.protoc, sources = [
